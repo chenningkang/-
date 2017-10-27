@@ -1,0 +1,254 @@
+/* CSS Document */
+.smenu{font-size:.12rem; }
+.selectdate{display:inline-block; height:30px; padding:5px 0 5px 10px; position:relative; }
+.selectdate-title{ border-color: #398439; border-radius: 3px;  color: #fff; width: 80px;padding: 0 30px 0 5px; height: 30px;  line-height: 30px;  background: #13b4e9 url(../images/bt-1.png) no-repeat right top; cursor:pointer;}
+
+.selectdate .on{ background: #13b4e9 url(../images/bt-2.png) no-repeat right top;}
+.selectdate-list{ position:absolute; top:41px;  z-index:99; background:#222; color:#fff; left:10px; right:0; display:none;  padding:10px 0; border-radius:3px;  }
+.selectdate-list a {display:block; text-align:center; color:#37abc3 !important; line-height:25px; }
+.selectdate-list a:hover{ text-decoration:none; color:#fff;}
+.selectdate select option{ font-size:12px; text-align:center;}
+
+.smenu{ position:relative; height: 40px;}
+
+.sbtn{ background: #fff;
+    position: absolute;
+    top: 5px;
+    width: 29px;
+    height: 29px;
+    border: 1px solid #13b4e9;
+    border-radius: 3px;}
+.sbtn-r{
+    right: 10px;
+    background: #fff url(../images/bt-3.png) no-repeat left top
+}
+.sbtn-l{
+    right: 50px;
+    background: #fff url(../images/bt-4.png) no-repeat left top
+}
+
+.sbtn-d{
+    right: 90px;
+    width: 60px;
+    text-align: center;
+    color: #fff;
+	line-height:30px;
+    background: #fc3343;
+    border-color: #fc3343
+}
+.sbtn-d a{ color:#fff !important;}
+.ps{ text-align:center; font-size:12px;padding:5px; color:#fc3343;}
+.navtable{ background:#fff;}
+.navtable h2{ background:#fc3343; text-align:center; color:#fff; padding:2px 0;}
+.navtable ul li{  position:relative; font-size:12px; line-height:26px; overflow:hidden;}
+.d-title{ left:0; top:0; padding-left:5px;}
+.d-title:before{ content:''; display:block; float:left; width:2px; height:10px; margin:8px 5px 5px 0; background:red;}
+.navtable ul li .li{ display:block; width:33.3%; text-align:center;  float:left;}
+.navtable ul li .li a{background:#fbfaff;margin:2px; display:block;}
+
+.chart-control{ overflow:scroll; overflow:hidden; background:#fff; position:relative;   margin: 2px;}
+BODY {margin-top: 0px;margin-bottom: 0px;}
+TD,TH {FONT: 13px/20px Arial, Tahoma, Helvetica, sans-serif}
+A:link { COLOR: #000; TEXT-DECORATION: none}
+A:visited { COLOR: #000; TEXT-DECORATION: none}
+A:hover { COLOR: #F00; TEXT-DECORATION: underline}
+TABLE.chart{border-top: 1px solid #B3D5F4; border-left: 1px solid #B3D5F4; border-right: 0px; border-bottom: 0px; } 
+.defaul {FONT-SIZE: 13px;line-height: 150%;}
+.search{ font-size:10pt;}
+.dibu {font-size: 14pt;color: #800000;font-weight: bold;line-height: 15pt}
+.title1 {COLOR: #800080;font-size: 28pt;text-align: center;font-weight: bold;line-height: 30pt;font-family: "妤蜂綋_GB2312"; background-color:#FFF;width:960px;padding:15px 0; margin:0}
+.red{color:#F00}
+.img{margin:-1px 0 5px -2px;display:block; text-align:center;width:42;height:42;border:0}
+.img1{margin:3px 0px 3px 5px;display:block; text-align:center;width:180;height:70;border:0}
+.table1{ background-color:#F0F8FF; border-collapse:collapse; text-align:center; font-size:10pt}
+.table2{ background-color:#C1E0FF; border-collapse:collapse; text-align:center; font-size:10pt}
+.tbdef{border-collapse:collapse; text-align:center; font-size:10pt}
+.tdbdr{width:0px;overflow:hidden;}
+.chart{border-collapse:collapse; text-align:center; font-size:10pt}
+
+table td{ border:1px solid #adcfee; min-width:20px; height: 21px; line-height: 20px;  font-size: 10px; text-align: center;  white-space:nowrap; }
+table td .td1{ width:14px; text-align:center; height: 14px; margin: 0 auto;}
+table td .td2{ width:29px; margin: 0 auto;}
+table td .td3{ width:46px; margin: 0 auto;}
+.pr{ position: relative;}
+table td sup{ position: absolute; top:0; right:0;}
+
+.tdh70{ height:42px !important; line-height:42px !important;}
+.lightblue{background:#E8F3FF;}
+.lightblue2{ background:#D9ECFF; }
+
+table { width:100%; height:100%;}
+#toptitle {background-color:#FFF;width:960px;padding:15px 0;margin:0 auto;text-align:center}
+/*鑳屾櫙鑹�*/
+
+/*.h1{ background-color: #FDFEE0}绾㈢悆涓€鍖鸿儗鏅壊*/
+/*.h2{ background-color: #FEE6DE}绾㈢悆浜屽尯鑳屾櫙鑹�*/
+.bgh1, .FDF{ background-color: #FDFEE0}/*绾㈢悆涓€鍖鸿儗鏅壊*/
+.bgh2, .FEE{ background-color: #FEE6DE}/*绾㈢悆浜屽尯鑳屾櫙鑹�*/
+/*.h3{ background-color: #FDFEE0}绾㈢悆涓夊尯鑳屾櫙鑹�*/
+.l1, .DAF{ background-color:#DAFCFE}/*钃濈悆涓€鍖鸿儗鏅壊*/
+.l2, .DBE{ background-color:#DBE8FD}/*钃濈悆浜屽尯鑳屾櫙鑹�*/
+.l3{ background-color:#E9FDBB}
+.l4{background-color:#FAEFFE}
+.bg, .C1E{ background-color:#C1E0FF}
+.bg1, .bCef, .cef{ background-color:#ceffff}/*鑳屾櫙鑹�1*/
+.bg2, .bCfc, .cfc{ background-color:#CFC}/*鑳屾櫙鑹�2*/
+.bg3, .bCbd, .cbd{ background-color:#CBDDFC}/*鑳屾櫙鑹�2*/
+.bcf{background-color:#BCF3E9}
+.bg4{ background-color:#F0F8FF}
+.fbg, .f4d{background-color:#fff4d2}
+.fbg1, .d9d{background-color:#ddf9de}
+.fbg2, .feb{background-color:#feebe9}
+.fbg3, .e6f{background-color:#e1e6ff}
+.fbg4, .bcd{background-color:#bcd5fe}
+
+.tabbg{ background:#0080C0 !important; color:#fff;}
+
+.dx{ cursor:text;}/*鐐归€�3琛屾牱寮�*/
+.dx3{ cursor:pointer;}/*鐐归€�3琛屾牱寮�*/
+.dxtr{ color: #FFF; background-color:#FFF; height:14px; text-align:center; }
+.tjtr{ color:#F00; background-color:#F0F8FF; height:14px}
+
+/*瀛椾綋*/
+.aria { font-family:Arial}
+.ab12 { font-family:Arial;font-weight: bold;font-size: 12pt;}
+.arblack{ font-family:Arial black;font-size: 10pt;font-weight: bold;}/*绮楅粦*/
+.arred { color:#F00;font-family:Arial black;font-size: 10pt;font-weight: bold;}/*绮楃孩*/
+.arredb { color:#C00; font-weight:bold;text-align: center}/*绮楃孩*/
+.arblueb { color:#009; font-weight:bold;text-align: center}/*绮楄摑*/
+.stred12b { color:#A32934;font-family:瀹嬩綋;font-size: 12px;font-weight: bold;text-align: center}/*绮楃孩*/
+.stblue12b { color:#009;font-family:瀹嬩綋;font-size: 12px;font-weight: bold;text-align: center}/*绮楄摑*/
+.stred11b { color:#A32934;font-family:瀹嬩綋;font-size: 11pt;font-weight: bold;text-align: center}/*绮楃孩*/
+.stblue11b { color:#009;font-family:瀹嬩綋;font-size: 11pt;font-weight: bold;text-align: center}/*绮楄摑*/
+.arred12{font-size: 12pt;color: #D90000;font-family:Arial black;width:36px}
+.arblue12{font-size: 12pt;color: #0000DB;font-family:Arial black;width:36px}
+.ar12r{font-size: 12pt;color: #D90000;font-family:Arial black;}
+.ar12b{font-size: 12pt;color: #0000DB;font-family:Arial black;}
+.b {font-weight: bold}/*鍔犵矖*/
+
+.cuhong{ font-size: 10pt;color: #e10000; font-weight:bold;}/*绮楃孩*/
+.culan{ font-size: 10pt;color: #00F; font-weight:bold;}/*绮楄摑*/
+.b10, .font1{color: #0000B5; font-size: 10pt;font-weight: bold;}
+.r10, .font2{color: #D90000; font-size: 10pt;font-weight: bold;}
+/*.font1 {font-size: 10pt;color: #0000B5; font-weight:bold;}
+.font2 {font-size: 10pt;color: #D50000; font-weight:bold;}*/
+.fjo2, .M{ color: #c0c0c0;}
+.fjo3, .N{ color: #afafaf}
+.f12pt{font-size: 12pt}
+.f14pt{font-size: 14pt}
+.f10red{color: #F00;font-size: 10pt; width:32px}
+.f10blue{color: #00F;font-size: 10pt; width:32px}
+.f14ablue { font-family:Arial black;color: #0000DB; font-size: 12pt; }
+.f14ared { font-family:Arial black;color: #D90000; font-size: 12pt; }
+.font3d1{ color:#C00; background-color:#CBDDFC; font-weight:bold;text-align: center}
+.font3d2{ color:#009; background-color:#CBDDFC; font-weight:bold;text-align: center}
+
+.font3dz1{ color:#C00; background-color:#FDFEE0; font-weight:bold;text-align: center}
+.font3dz2{ color:#009; background-color:#FDFEE0; font-weight:bold;text-align: center}
+.gezi_red { color:#FFFFFF; background-color:#FF0000; font-weight:bold; text-align: center;}
+.gezi_redb { color:#FFFFFF; background-color:#CC3232; font-weight:bold; text-align: center;}
+.gezi_blue { color:#FFFFFF; background-color:#0000FF; font-weight:bold; text-align: center;}
+.gezi_yellow  { color:#FFFFFF; background-color:#FF9900; font-weight:bold; text-align: center;}
+.R_red7 {FONT-WEIGHT: bold; BACKGROUND: url(../images/redback13.png) no-repeat center 50%; COLOR: #FFF; FONT-FAMILY: Arial;text-align: center;background-size: contain;}
+.R_blue7 {FONT-WEIGHT: bold; BACKGROUND: url(../images/blueback13.png) no-repeat center 50%; COLOR: #FFF; FONT-FAMILY: Arial;text-align: center;background-size: contain;}
+.R_red14 {FONT-WEIGHT: bold; BACKGROUND: url(../images/redback14.png) no-repeat center 50%; COLOR: #FFF; FONT-FAMILY: Arial;text-align: center;background-size: contain;}
+.R_blue14 {FONT-WEIGHT: bold; BACKGROUND: url(../images/blueback14.png) no-repeat center 50%; COLOR: #FFF; FONT-FAMILY: Arial;text-align: center;background-size: contain;}
+.R_red6 {FONT-WEIGHT: bold; BACKGROUND: url(../images/redback16.png) no-repeat center 50%; COLOR: #FFF; FONT-FAMILY: arial;text-align: center;background-size: contain;}
+.R_blue6 {FONT-WEIGHT: bold; BACKGROUND: url(../images/blueback16.png) no-repeat center 50%; COLOR: #FFF; FONT-FAMILY: arial;text-align: center;background-size: contain;}
+.R_red {FONT-WEIGHT: bold; BACKGROUND: url(../images/redback17.png) no-repeat center 50%; COLOR: #FFF; FONT-FAMILY: Arial;text-align: center;background-size: contain;}
+.R_blue{FONT-WEIGHT: bold; BACKGROUND: url(../images/blueback17.png) no-repeat center 50%; COLOR: #FFF; FONT-FAMILY: Arial;text-align: center;background-size: contain;}
+.R_red17 {FONT-WEIGHT: bold; BACKGROUND: url(../images/redback17.png) no-repeat center 50%; COLOR: #FFF; FONT-FAMILY: Arial;text-align: center;background-size: contain;}
+.R_redb17 {FONT-WEIGHT: bold; BACKGROUND: url(../images/redbackb17.png) no-repeat center 50%; COLOR: #FFF; FONT-FAMILY: Arial;text-align: center;background-size: contain;}
+.R_blue17 {FONT-WEIGHT: bold; BACKGROUND: url(../images/blueback17.png) no-repeat center 50%; COLOR: #FFF; FONT-FAMILY: Arial;text-align: center;background-size: contain;}
+.R_red18 {FONT-WEIGHT: bold; BACKGROUND: url(../images/redback18.png) no-repeat center 50%; COLOR: #FFF; FONT-FAMILY: Arial;text-align: center;background-size: contain;}
+.R_redb18 {FONT-WEIGHT: bold; BACKGROUND: url(../images/redbackb18.png) no-repeat center 50%; COLOR: #FFF; FONT-FAMILY: Arial;text-align: center;background-size: contain;}
+.R_blue18 {FONT-WEIGHT: bold; BACKGROUND: url(../images/blueback18.png) no-repeat center 50%; COLOR: #FFF; FONT-FAMILY: Arial;text-align: center;background-size: contain;}
+.missing {margin-left: -2px; margin-right: -2px; color: #AFAFAF; FONT-FAMILY: 瀹嬩綋; font-size: 9pt; text-align: center;}
+.missing_lotto {margin-left: -2px; margin-right: -2px; color: #C0C0C0; FONT-FAMILY: 瀹嬩綋; font-size: 9pt; text-align: center;}
+.statistics {margin-left: -2px; margin-right: -2px; font-size: 10pt; letter-spacing: -2px; text-align: center;}
+.statistics_red {margin-left: -2px; margin-right: -2px; color: #F00; font-size: 10pt; letter-spacing: -2px; text-align: center;}
+.statistics_blue {margin-left: -2px; margin-right: -2px; color: #00F; font-size: 10pt; letter-spacing: -2px; text-align: center;}
+.retract_2px {margin-left: -2px; margin-right: -2px; text-align: center;}
+.line980 {POSITION: relative; MARGIN: 0px auto; WIDTH: 980px}
+.line1237 {POSITION: relative; MARGIN: 0px auto; WIDTH: 1237px}
+.chart TD{border-top: 1px solid #FFFFFF; border-left: 1px solid #FFFFFF; border-right: 1px solid #B3D5F4; border-bottom: 1px solid #B3D5F4; } 
+.chart_topic {COLOR: #800080;font-size: 28pt;text-align: center;font-weight: bold;line-height: 30pt;font-family: "妤蜂綋_GB2312"}
+.chart_top {background-color:#0080C0; color: #FFFFFF; text-align:center; height:25px}
+.chart_record {background-color:#FFFFFF; color: #FFFFFF;text-align:center; height:14px}
+.chart_bottom {background-color:#D9ECFF; text-align:center; }
+.chart_list {font-size: 14pt;color: #800000;font-weight: bold;line-height: 15pt}
+.red {color: #FF0000;text-align:center;}
+.blue {color: #0000FF;text-align:center;}
+
+
+
+
+.grey{font-size: 10pt;color: #C0C0C0;}
+.yinbaizi {color: #C0C0C0}
+.h201{color: #F00;font-size: 12pt;font-family:Arial}
+.h12, .12hong {color: #C00; font-size: 12pt; font-family:Arial, Helvetica, sans-serif }
+.l12, .12lan {color: #009; font-size: 12pt;font-family:Arial, Helvetica, sans-serif}
+.l201{color: #00F;font-size: 12pt;font-family:Arial}
+.lan12{font-size: 12pt;color: #0000DB;font-weight:bold; font-family:Arial, Helvetica, sans-serif;width:36px}
+.p312b{font-size: 12pt;color: #0000DB;font-weight:bold; font-family:Arial, Helvetica, sans-serif;width:45px}
+.p3r{ width:18px; background-color:#CBDDFC; color:#C00;font-weight:bold; }
+.p3b{ width:18px; background-color:#CBDDFC; color:#009;font-weight:bold; }
+.p5b{ width:15px; background-color:#CBDDFC; color:#009;font-weight:bold; }
+.p3j{ color:#F00; width:30px}
+.p3o{ color:#00F; width:30px}
+.qlkj{color:#F00; background-color:#FEEFCC; width:20px}
+.red9pt, .r9{font-size: 9pt;text-align: center;font-weight: bold;color: #F00;}
+.sdda{ color:#F00; width:18px}
+.sdxiao{ color:#00F; width:18px}
+.sdo{ color:#F00; width:28px}
+.sdji{ color:#00f; width:28px}
+.sdkj{color: #F00;font-size: 12pt; width:32px}
+.sdsj{font-size: 12pt; width:32px}
+.S_R{letter-spacing: -2px;color:#F00}
+.S_B{letter-spacing: -2px;color:#00F}
+/*sup{color:#FF0000}*/
+.9pt{ font-size:9pt}
+.12pt {font-size: 12pt}
+.line980 {POSITION: relative; MARGIN: 0px auto; WIDTH: 980px}
+.wrap_datachart{ width:980px;position:absolute;  MARGIN-RIGHT: 230px;MARGIN-LEFT: 16%;}
+.wrap_datachart{ width:980px; float:left;}
+
+.cm_zst_blueball{ color:#009;font-family:瀹嬩綋;font-size: 12px;font-weight: bold;text-align: center}
+
+#chart-table{transform-origin: 50% 50%;  cursor:pointer;}
+
+#chart-table img{ margin:0 auto; width:10px;}
+.chart-control-on td{line-height:60px;font-size:40px;min-width:50px;}
+.navtable td{ }
+
+.inav-warp{ top:.4rem;}
+.lan div{ position: relative; z-index: 100;}
+
+.lan{z-index:999; position:relative;}
+.w30,.w60,.w100,.w160,.w200,.w240,.w300{ width:30px; margin:0 auto;}
+.w60{ width:60px}
+.w100{width:100px}
+.w160{ width:160px}
+.w200{ width:200px}
+.w240{ width:240px}
+.w300{ width:300px}
+
+
+@media screen and (min-width: 1440px){
+    table td{
+        height:33px;
+        line-height: 24px;
+        font-size: 14px;
+    }
+	table td .td1{ width:30px; }
+	table td .td2{ width:60px; }
+	table td .td3{ width:90px;}
+    
+    .chartTable .td{ height: 33px; font-size: 12px; line-height: 33px;}
+    .qihao-con{margin-top:0;}
+
+    table td .td3{ width:80px; margin: 0 auto;}
+    .chart-control{ padding-left:60px;}
+    .qihao{ width:60px; }
+    .qihao-con{ width: 101%; }
+}

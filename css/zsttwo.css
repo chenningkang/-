@@ -1,0 +1,131 @@
+@charset "utf-8";
+/* CSS Document */
+.filter-box{ background:#fff; padding:.05rem;overflow-x: scroll;}
+.filter-line{ overflow:hidden; height:.24rem; margin:.05rem; font-size:.12rem; white-space: nowrap; min-width:340px;}
+.filter-line span{ border:1px solid #e5e5e5; padding:.02rem .05rem; font-size:.12rem; display:inline-block; margin-right:.05rem; cursor:pointer;}
+.filter-line span.on{ color:#fff; background:#eb0b3b; border:1px solid #eb0b3b;}
+
+.chart-control{ padding-left:45px; font-size:.1rem; position:relative;}
+.qihao{position: absolute;left:0;width:45px;z-index:8; }
+.qihao-title{ color: #666;height: 49px; ;line-height:49px;font-size: 10px; text-align: center;    background: #f4f4f4;    border: 1px solid #ddd;    border-left: 0 none;    width: 100%;    z-index: 9;	top:0;  }
+	
+.chartTable td{border: 0 none; border-bottom: 1px solid #adcfee;  color:#333; display:inline-block;font-size:10px;text-align: center;vertical-align: middle; line-height:20px;text-overflow:ellipsis;}
+.chartTable .td{ line-height:20px; height:21px;  border-bottom: 1px solid #adcfee;     border-right: 1px solid #adcfee;}
+	
+#divqh td{  height:20px;  width: 49px;  display:block; text-overflow:ellipsis;}
+.chartTable{ background:#fff;}
+.chartTable td{ height:14px; width:24px; }
+.qihao-con{ margin-top:1px; width:46px; width:101%; }
+.header_top{  height:65px; }
+.header-con{margin-left:1px;  position:relative; overflow: scroll; position:relative; }
+.header_br{ overflow:hidden; min-width:100% !important;width:5000px;}
+.q{    z-index: 99; position: absolute;}
+
+#chart-table,#chart-title,#divqh{ position:relative;}
+
+::-webkit-scrollbar {
+    display: none;
+}
+.header_box{overflow:scroll;-webkit-overflow-scrolling: touch; position:relative;}
+.header_top .table-top{height:50px;}
+.header_top th{background-color: #f4f4f4;border: 1px #ddd solid; vertical-align:middle; text-align:center; height:24px; line-height:1.2;}
+
+
+
+.chartTable .tdbck{ height:0; display:none; }
+.chartTable .tdbck td{height:2px !important; font-size:0; width:100%;margin: 0; display:block !important; padding: 0; border:0 !important; overflow: hidden; background: #DBDBDB !important;white-space:nowrap;}
+.chartTable .line_r{border-right: 2px solid #DBDBDB !important;}
+
+
+
+.chartTable tbody td.Y {color:white}/*ÏÔÊ¾ÒÅÂ©*/
+.chartTable tbody td.C{color: #DECDD7;}/*Òþ²ØÒÅÂ©*/
+
+.chartTable tbody td.C0{}/*·Ö²ãÒÅÂ©*/
+.chartTable tbody td.C1{ background:#e7e7e7 !important; color:red;}/*·Ö²ãÒÅÂ©*/
+
+
+
+.bgbackground_c_0{  background: #f6fafd;color: inherit}
+.bgbackground_c_1{  background: #f9fbf9;color: inherit}
+.bgbackground_c_2{  background: #fff8f5;color: inherit}
+.bgbackground_c_3{  background: #fbfbf5;color: inherit}
+.bgbackground_c_4{  background: #f9fafb;color: inherit}
+
+.c_C_3_mini,.c_C_red,.c_C_2_mini,.c_C_0,.c_C_1,.c_C_2,.c_C_3,.c_C_4,.B_0,.B_1, .B_2, .B_3, .B_4, .B_5, .B_6, .B_7, .B_8, .B_9, .B_10, .B_11, .B_12 {width:22px; margin: 0 auto;line-height:18px;display:inline-block;color:#FFF !important; text-align:center;background-repeat: no-repeat; background-position: center; background-size: auto 90%;}
+.B_0{background-image:url(../images/ball_red.gif);}/*ºìÇò±³¾°*/
+.B_1{ background-image:url(../images/ball_blue_b.gif);}/*À¶Çò±³¾°*/
+.B_2{ background-image:url(../images/chartball_bh.gif);}/*»ÆÇò±³¾°*/
+.B_3{ background-image:url(../images/chartball_g.gif);}/*×ÏÉ«Çò±³¾°*/
+
+.B_5{ background-image:url(../images/chartball_bh5.png);}/*ÍÁ»ÆÉ«Çò±³¾°*/
+
+.c_div{ line-height: 18px;width: 18px; height: 18px; line-height: 18px; position: relative; margin:0 auto;}
+.c_C_0{ background: #1E88D2; width: 18px; height: 18px; line-height: 18px; border-radius: 50%;}/*cqssc only*/
+.c_C_1{ background: #6AA25F; width: 18px; height: 18px; line-height: 18px; border-radius: 50%;}/*cqssc only*/
+.c_C_2{ background: #FF4400; width: 18px; height: 18px; line-height: 18px; border-radius: 50%;}/*cqssc only*/
+.c_C_3{ background: #8d9202; width: 18px; height: 18px; line-height: 18px; border-radius: 50%;}/*cqssc only*/
+.c_C_4{ background: #839ba7; width: 18px; height: 18px; line-height: 18px; border-radius: 50%;}/*cqssc only*/
+.c_C_red{ background: #FF0638; width: 18px; height: 18px; border-radius: 50%;}/*cqssc only*/
+.c_C_2_mini{ background: #FF4400; width: 13px; height: 13px; border-radius: 50%; position: absolute; top: -2px;
+    right: -5px;
+    font-size: 10px; line-height: 1; z-index: 99}/*mini ball*/
+.c_C_3_mini{ background: #6aa35e; width: 13px; height: 13px; border-radius: 50%; position: absolute; top: -2px;
+    right: -5px;
+    font-size: 10px; line-height: 1; z-index: 99}
+.hcbal li{ display: inline-block; position: relative;padding:0 5px;}
+
+
+
+
+
+.C_shit_2,.C_0,.C_1, .C_2, .C_3, .C_4, .C_5, .C_6, .C_7, .C_8, .C_9, .C_10, .C_11, .C_12,.C_red,.C_blue,.C_green,.C_shit {background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto 90%;
+    border-radius: 3px;
+    color: #fff !important;
+    display: block;
+    width:22px;
+    margin: 0 auto;
+    text-align: center;
+    padding:0 5px;
+}
+.c_w_30{ width:30px !important;}
+.C_0{background:#c25a5a;}/*ºìÇò±³¾°*/
+.C_1{ background:#3166cc;}/*À¶Çò±³¾°*/
+.C_2{ background:#e7a500;}/*»ÆÇò±³¾°*/
+.C_3{ background:#9933cc;}/*×ÏÉ«Çò±³¾°*/
+.C_4{ background:#6aa25f;}/*ÂÌÉ«Çò±³¾°*/
+.C_5{ background:#8d9201;}/*ÂÌ»ÆÉ«Çò±³¾°*/
+.C_6{ background:#1e88d2;}/*ÂÌ»ÆÉ«Çò±³¾°*/
+
+.C_12{background:#FF0638;}
+.C_11{background:#00CC00;}
+.C_10{background:#3399FF;}
+.C_9{background:#FF4400;}
+.C_8{background:#8D9202;}
+.C_red{background:#FF0638;}
+.C_green{background:#00CC00;}
+.C_blue{background:#3399FF;}
+.C_shit{background:#8d9202;}
+
+.C_shit_2{background:#839ba7;}
+ .CL_0{color:#c25a5a !important;}/*ºì×Ö*/
+.CL_1{color:#3166cc !important;}/*À¶×Ö*/
+.CL_2{color:#e7a500 !important;}/*»Æ×Ö*/
+.CL_3{color:#9933cc !important;}/*×Ï×Ö*/
+
+.CL_0{color:#c25a5a !important;}/*ºì×Ö*/
+.CL_1{color:#3166cc !important;}/*À¶×Ö*/
+.CL_2{color:#e7a500 !important;}/*»Æ×Ö*/
+.CL_3{color:#9933cc !important;}/*×Ï×Ö*/
+
+.L_0{}/*Á¬ºÅ±êÊ¶*/
+.L_1{ background:#00b3ff !important;}/*Á¬ºÅ×´Ì¬*/
+
+.CH_0{}/*ÖØºÅ±êÊ¶*/
+.CH_1{ background:#3bc200 !important;}/*Á¬ºÅ×´Ì¬*/
+
+.kjfc {
+    color: #ff6842;
+}
