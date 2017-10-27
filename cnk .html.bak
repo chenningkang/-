@@ -17,6 +17,7 @@
 <link href="css/home2.css" rel="stylesheet" />
 <link href="css/datepicker.css" rel="stylesheet" />
 <script src="js/jquery-1.9.1.min.js"></script>
+
 <link rel="stylesheet" href="css/base3.css">
 <link rel="stylesheet" href="css/fans3.css">
 <script src="js/libs/require.js" defer
