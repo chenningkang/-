@@ -322,17 +322,17 @@ button,input,select,textarea {
     width: .14rem;
     height: .14rem;
     margin-right: .03rem;
-    background: url(../img/icon.png) no-repeat right -0.9rem;
+    background: url(../images/icon1.png) no-repeat right -0.9rem;
     background-size: auto 3rem;
     vertical-align: bottom;
     margin-left: .05rem
 }
-.eye-btn{ background:url(../img/eye.png) left -1px no-repeat; background-size:100% auto;}
+.eye-btn{ background:url(../images/eye.png) left -1px no-repeat; background-size:100% auto;}
 .comment-btn {
     width: .14rem;
     height: .14rem;
     margin-right: .03rem;
-    background: url(../img/icon.png) no-repeat right -1.38rem;
+    background: url(../images/icon.png) no-repeat right -1.38rem;
     background-size: auto 3rem;
     vertical-align: bottom;
     margin-left: .03rem;
@@ -450,6 +450,6 @@ button,input,select,textarea {
 
 /*¹«¸æ*/
 .notice{ background:#fff; padding:0px 5px; line-height:38px;  }
-.notice_box { background:url(../img/ico_notice.png) left 7px no-repeat; padding-left:35px;height:38px; overflow:hidden;}
+.notice_box { background:url(../images/ico_notice.png) left 7px no-repeat; padding-left:35px;height:38px; overflow:hidden;}
 .notice a { color:#555; font-size:.14rem; padding:0; margin:0; border:none;}
 .mover-warp .notice a {padding:0; margin:0; border:none; font-size:.13rem}

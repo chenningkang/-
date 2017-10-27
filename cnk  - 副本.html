@@ -107,7 +107,7 @@
 							<li class="tab_con">
 								<ul> 
 								
-										
+							    bbbbb
 								</ul>
 							</li>
 							
@@ -116,12 +116,13 @@
 							<li class="tab_con">
 								<ul>
 					
-											
+								aaaaa	
 								</ul>
 							</li>
 								
 							<li class="tab_con">
-								<ul>
+								<ul>	
+								vvvvvv
 	
 
 								</ul>
@@ -131,7 +132,7 @@
 							<li class="tab_con">
 								<ul>
 							
-
+                                  ccccccc
 								</ul>
 							</li>	
 							
@@ -150,16 +151,16 @@
 	<script type="text/javascript">
 		 $(function(){
 				
-		      $.jqtab = function(tab_title,tab_conbox,event,title_style){
+		      $.jqtab = function(toptitle,tab_conbox,event){
 		        $(tab_conbox).find(".tab_con").hide();//先隐藏掉所有的内容
-		        $(tab_title).find("li:first").addClass(title_style).show();//给第一个titel切换按钮加上样式
+		      //  $(toptitle).find("li:first").addClass(title_style).show();//给第一个titel切换按钮加上样式
 		        $(tab_conbox).find(".tab_con:first").show();//内容的第一个显示出来
 
 		        //开始执行事件
 				
-		        $(tab_title).find("li").bind(event,function(){//绑定一个自定义事件并执行
-		          $(this).addClass(title_style).siblings("li").removeClass(title_style);
-		          var activeindex = $(tab_title).find("li").index(this);//拿到当前的索引
+		        $(toptitle).find("li").bind(event,function(){//绑定一个自定义事件并执行
+		        //  $(this).addClass(title_style).siblings("li").removeClass(title_style);
+		          var activeindex = $(toptitle).find("li").index(this);//拿到当前的索引
 		          $(tab_conbox).children().eq(activeindex).show().siblings().hide();//内容部分根据索引匹配对应的内容
 		          return false;
 		        });

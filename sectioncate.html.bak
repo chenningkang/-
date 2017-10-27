@@ -57,7 +57,7 @@
 
 					<div class="scrollbar fans-nav">
 						<ul id="ul-nav-left">
-							<li class="section-134"><a href="javascript:void(0);">福彩3D区</a></li>
+							<li class="on section-134"><a href="javascript:void(0);">福彩3D区</a></li>
 							<li class="on section-135"><a href="javascript:void(0);">双色球区</a></li>
 							<li class="section-148"><a href="javascript:void(0);">6彩</a></li>
 							<li class="section-147"><a href="javascript:void(0);">排三排五</a></li>
@@ -70,7 +70,7 @@
 
 					<div class="scrollbar fans-nav-con">
                          
-							<ul id="ul-nav-right" class="section-134 ul-nav-right">
+							<ul id="ul-nav-right" class="on section-134 ul-nav-right">
 								<a href="posts.html">
 									<li>
 										<div class="all-pic">

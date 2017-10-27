@@ -7,11 +7,10 @@
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no, email=no" name="format-detection">
     <meta content="no" name="wap-font-scale">
-    <title>快速注册-万彩吧_pk10北京赛车_时时彩_快3_11选5_天下彩_天空彩票_快乐10分</title>
+    <title>忘记密码-万彩吧_pk10北京赛车_时时彩_快3_11选5_天下彩_天空彩票_快乐10分</title>
     <script src="/js/libs/fontSize.js"></script>
     <link rel="stylesheet" href="css/loginbase.css">
     <link rel="stylesheet" href="css/loginfans.css">
-    <script src="/js/libs/require.js" defer data-main="/js/export/main.js?v=123"></script>
     <script>
             var massage = null;
         </script>
@@ -26,7 +25,7 @@
 
             <div class="hd-wrap">
                 <a class="left icon loginicon return" href="JavaScript:history.go(-1)"></a>
-                <h1 class="hd-logo">快速注册</h1>
+                <h1 class="hd-logo">忘记密码</h1>
                 <a class="right login-ar" href="login.html">登录</a>
             </div>
 
@@ -41,7 +40,7 @@
                 </div>
                 <div class="reg-plan-text">
                     <span class="spt0 active">填写手机号</span>
-                    <span class="spt1">填写用户名</span>
+                    <span class="spt1">设置密码</span>
                     <span class="spt2">成功</span>
                 </div>
             </div>
@@ -56,7 +55,7 @@
                 </div>
                 <div class="reg-plan-text">
                     <span class="spt0 ">填写手机号</span>
-                    <span class="spt1 active">填写用户名</span>
+                    <span class="spt1 active">设置密码</span>
                     <span class="spt2">成功</span>
                 </div>
             </div>
@@ -71,50 +70,38 @@
                         <input name="picpw" class="box" type="text"  placeholder="请填写计算结果">
                         <div class="yma"><img src="images/yzm.png" ></div>
                     </div>
-
-                    <input hidden id="mark" type="text" value="/fm/one">
+                    <input hidden id="mark" type="text" value="/fm/fone">
 
                     <div id="register-btn" class="login-btn tc">获取验证码</div>
-                    <div class="reg-sheet-protocol" id="js-reg-sheet-protocol">
-                        <span class="reg-sheet-iradio active"></span>
-                        <span>我已经阅读并同意《<a href="/protocol.html">万彩吧用户注册协议</a>》</span>
-                    </div>
                 </div>
 
                 <div class="password-wrap" style="display:none">
-                    <form id="register-form" method="post" action="/fm/two">
+                    <form id="register-form" method="post" action="/fm/ftwo">
                         <input type="hidden" name="_token" value="C6zfhq8WbcDpBfWQp9221blr6ybyhHKDBp3xLtTT">
                         <input hidden type="text" id="tel" name="tel">
-                    <div class="line">
-                        <p class="o-lt">验证码</p>
-                        <p class="o-lt2"><input name="code" class="box" type="text" ></p>
-                        <p class="o-lr"><a href="javascript:void(0)" class="org-btn" id="get_check_code">重新获取验证码</a></p>
-                    </div>
+                        <div class="line">
+                            <p class="o-lt">验证码</p>
+                            <p class="o-lt2"><input name="code" class="box" type="text" ></p>
+                            <p class="o-lr"><a href="javascript:void(0)" class="org-btn" id="get_check_code">重新获取验证码</a></p>
+                        </div>
 
-                    <div class="reg-sheet-tip"></div>
+                        <div class="reg-sheet-tip"></div>
 
-                    <div class="line dnbottom">
-                        <p class="o-lt">用户名</p>
-                        <p class="o-lt3"><input name="name" class="box" type="txet"  placeholder="不超过8个中文，注册后不能修改"></p>
-                    </div>
-                    <div class="reg-sheet-line"></div>
-                    <div class="line dntop dnbottom">
-                        <p class="o-lt">密码</p>
-                        <p class="o-lt3"><input name="pwd1" class="box" type="password" placeholder="6-20个数字和字母_"></p>
-                    </div>
-                    <div class="reg-sheet-line"></div>
-                    <div class="line dntop ">
-                        <p class="o-lt">确认密码</p>
-                        <p class="o-lt3"><input name="pwd2" class="box" type="password" placeholder=""></p>
-                    </div>
-                    <div id="register-submit" class="login-btn tc">注册</div>
+                        <div class="line  dnbottom">
+                            <p class="o-lt">新密码</p>
+                            <p class="o-lt3"><input name="pwd1" class="box" type="password" placeholder="6-20个数字和字母"></p>
+                        </div>
+                        <div class="reg-sheet-line"></div>
+                        <div class="line dntop ">
+                            <p class="o-lt">确认密码</p>
+                            <p class="o-lt3"><input name="pwd2" class="box" type="password" placeholder=""></p>
+                        </div>
+
+                        <div id="register-submit" class="login-btn tc">提交</div>
                     </form>
                 </div>
             </div>
-
-
         </div>
-
     </div>
 </div>
 
