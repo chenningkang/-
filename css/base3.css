@@ -475,3 +475,6 @@ button,input,select,textarea {
 .notice_box { background:url(../images/ico_notice.png) left 7px no-repeat; padding-left:35px;height:38px; overflow:hidden;}
 .notice a { color:#555; font-size:.14rem; padding:0; margin:0; border:none;}
 .mover-warp .notice a {padding:0; margin:0; border:none; font-size:.13rem}
+
+
+.header center{font-size: .18rem;color: #fff;width: 50%;word-break: keep-all;margin: 0 auto}
