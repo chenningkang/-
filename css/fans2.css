@@ -275,7 +275,7 @@
 .fans-search{ position:relative; padding:.02rem .1rem .1rem;}
 .fans-search-text{ background:#fff; border:1px solid #cfd3d9; height:.3rem;}
 .fans-search-text input{ width:100%;  border:none; text-indent:.3rem; padding:.08rem 0 0; font-size:.14rem; height:.16rem; line-height:.16rem;}
-.fans-search-icon{ background:url(../img/search_icon.png) no-repeat; width:.16rem; height:.16rem; position:absolute; left:.18rem; top:.1rem; background-size:100%;}
+.fans-search-icon{ background:url(../images/search_icon.png) no-repeat; width:.16rem; height:.16rem; position:absolute; left:.18rem; top:.1rem; background-size:100%;}
 .fans-t-t{ font-size:.14rem; color:#666; border-bottom:1px solid #e5e5e5;  padding:.05rem .1rem; }
 
 .section{ background:#fff; margin-top:.05rem; overflow:hidden;}

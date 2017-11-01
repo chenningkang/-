@@ -7,12 +7,12 @@ switch(url){
 		
 		});
 	break;
-	case 'fans'://社区
-		require(['models/banner','models/fans'],function(banner,F){
-			banner.banner('#fans-banner');
-			F.init();			
-		});
-	break;
+// 	case 'fans'://社区
+//		require(['models/banner','models/fans'],function(banner,F){
+//			banner.banner('#fans-banner');
+//			F.init();			
+//		});
+//	break; 
 	case 'Hotfans'://热贴
 		require(['models/hotfans'],function(H){
 			H.init();			

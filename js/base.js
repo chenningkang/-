@@ -466,7 +466,7 @@ function isMobile(){
 var _hmt = _hmt || [];
 (function() {
   var hm = document.createElement("script");
-  hm.src = "//hm.baidu.com/hm.js?9fe3fc6100dbd171f64b9ddc6ee8b791";
+  hm.src = "#";
   var s = document.getElementsByTagName("script")[0]; 
   s.parentNode.insertBefore(hm, s);
 })();
