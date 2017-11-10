@@ -38,8 +38,8 @@
 	</header>
 
 	<section class="hk6nav">
-		<ul class="hk6nav-box">
-			<li><a href="kaijiang.html">开奖</a></li>
+	 <!--<ul class="hk6nav-box">
+			<li><a href="kaijiang005.html">开奖</a></li>
 			<li><a href="login.html">聊室</a></li>
 			<li><a href="yuce.html">预测</a></li>
 			<li><a href="yuce.html">字谜</a></li>
@@ -49,7 +49,7 @@
 			<li><a href="yuce.html">技巧</a></li>
 			<li><a href="posts.html">社区</a></li>
 			<li><a href="yuce.html">推荐</a></li>
-		</ul>
+		</ul>  -->
 	</section>
 
 	<!-- 公告 -->
@@ -74,17 +74,19 @@
 
 	<section class="newsjia">
 		<div class="news-tit">
-			<div class="news-tit-bg">
-				排列三 第17274期
-				<time class="fr" style="font-size:.1rem">2017-10-08</time>
+			<div class="news-tit-bg" id="pls">
+				
 			</div>
+			<time class="right" style="font-size:.1rem" id="timeid"></time>
 		</div>
 
 		<ul>
-			<li class="li5248443"><a href="kaijiang.html">
+			<li class="li5248443"><a href="kaijiang005.html">
 					<div class="clearfix liuhe">
-						<i class='red-spot'>9</i> <i class='red-spot'>4</i> <i
-							class='red-spot'>6</i> <i class="icon right history">开奖历史</i>
+						<i class='red-spot' id='id1'> </i>
+						<i class='red-spot' id='id2'> </i> 
+						<i class='red-spot' id='id3'> </i> 
+						<i class="icon right history">开奖历史</i>
 					</div>
 			</a></li>
 		</ul>
@@ -200,4 +202,33 @@
 
 
 </body>
+<script>
+
+	$(function(){
+	var	url ="http://47.91.167.130:8032/appInterface/lottery/findLatelyLotteryResult2.do?type=pls";
+      $.ajax({
+        data:{"type":"pls"},//参数
+       // dataType: 'jsonp',
+	    type:"GET",
+		url,
+        success: function(data) {
+		//	alert(data.result[0].number);
+			a=data.result[0].number;
+			qihao=(data.result[0].qihao).substr(2);
+			typeName=data.result[0].typeName;
+			datelines=(data.result[0].dateline).substr(0,10);
+			yi=a.substr(0,1);
+			er=a.substr(2,1);
+			sa=a.substr(4,1);
+		 //  alert(datelines);
+		   $("#pls").html(typeName+" "+"第"+qihao+"期");
+		   $("#timeid").html(datelines);
+           $("#id1").html(yi);
+		   $("#id2").html(er);
+		   $("#id3").html(sa);
+        }
+      });
+	});
+
+</script>
 </html>

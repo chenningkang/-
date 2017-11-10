@@ -64,6 +64,7 @@
 
 .detail-nav span{ display:block; width:50%; font-size:.16rem; float:left; border-bottom:1px solid #e8e8e8; line-height:.35rem; text-align:center; background:#fff; color:#999;}
 .detail-nav span.on{ color:#eb0b3b; border-bottom:1px solid #eb0b3b}
+.detail-nav span.ons{ color:#eb0b3b; border-bottom:1px solid #eb0b3b ; width:100%;}
 .detail-com{ background:#fff; padding:.1rem .1rem .1rem .1rem; position:relative; border-bottom:1px solid #e8e8e8;}
 .detail-com .tip{ font-size:.16rem;}
 .detail-com p { font-size:.10rem;margin-bottom:.1rem; color:#999}
@@ -78,9 +79,13 @@
 }
 .kaij-table th{ background:#f4f4f4;}
 .mover-warp{ background:#fff; display:none;}
+.mover-warps{ background:#fff; }
 .mover-warp li a{ position:relative; padding: 0 .1rem .05rem; border-bottom:1px solid #e8e8e8; font-size:.15rem; line-height:.28rem; display:block;}
 .mover-warp li .right{ top:0; right:.1rem; font-size:.1rem; color:#999;}
 .mover-warp li .idetails{ top:.34rem;}
+.mover-warps li a{ position:relative; padding: 0 .1rem .05rem; border-bottom:1px solid #e8e8e8; font-size:.15rem; line-height:.28rem; display:block;}
+.mover-warps li .right{ top:0; right:.1rem; font-size:.1rem; color:#999;}
+.mover-warps li .idetails{ top:.34rem;}
 
 
 /*频道*/
@@ -441,3 +446,18 @@ a.new{ background: url("../images/new.png") no-repeat; background-size: .2rem .2
 
 
 .history{margin-top:.05rem; color: #999; font-size: .1rem; line-height: .2rem; width: 70px;  background-position: 48px -.6rem;}
+
+
+.boxs{}
+.box  .boxli{}
+.boxs .boxli{height:0.6rem;line-height:0.6rem;padding:0 0.2rem;white-space: nowrap;text-overflow: ellipsis;}
+.boxs .boxli:nth-child(2n-1){background:#f5f5f5;}
+.boxs .boxli .span1{color:#535353; font-size:.11rem; margin-left:0.05rem;}
+.boxs .boxli .span2{color:#535353; font-size:.11rem; margin-left:0.05rem;}
+.boxs .boxli .span3{color:#535353; font-size:.11rem; }
+.boxs .boxli .span4{color:#535353; font-size:.11rem; margin-left:0.05rem; }
+.boxs .boxli .span5{color:#535353; font-size:.11rem; margin-left:0.05rem; }
+.boxs .boxli b{color:#f03d3d;font-weight:normal; font-size:.11rem; margin-left:0.05rem;}
+
+
+

@@ -48,6 +48,8 @@ html,*{
 	right:0;
     z-index: 9;
     -webkit-box-sizing: border-box;
+	font-size:.1rem;
+	color:#999;
     box-sizing: border-box;}
 
 .mui-flex{

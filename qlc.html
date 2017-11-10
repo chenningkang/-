@@ -37,13 +37,13 @@
 	</header>
 
 	<section class="hk6nav">
-		<ul class="hk6nav-box">
-			<li><a href="kaijiang.html">开奖</a></li>
+	<!-- 	<ul class="hk6nav-box">
+			<li><a href="kaijiang007.html">开奖</a></li>
 			<li><a href="login.html">聊室</a></li>
 			<li><a href="yuce.html">预测</a></li>
 			<li><a href="zst.html">走势</a></li>
 			<li><a href="posts.html">社区</a></li>
-		</ul>
+		</ul>  -->
 	</section>
 
 	<!-- 公告 -->
@@ -68,21 +68,25 @@
 
 	<section class="newsjia">
 		<div class="news-tit">
-			<div class="news-tit-bg">
-				七乐彩 第2017117期
-				<time class="fr" style="font-size:.1rem">2017-10-06</time>
+			<div class="news-tit-bg" id="qlc">
+						
 			</div>
+			<time class="right" style="font-size:.1rem" id="timeid"></time>
 		</div>
 
 		<ul>
-			<li class="li5241465"><a href="kaijiang.html">
-					<div class="clearfix liuhe">
-						<i class='red-spot'>01</i> <i class='red-spot'>03</i> <i
-							class='red-spot'>11</i> <i class='red-spot'>15</i> <i
-							class='red-spot'>22</i> <i class='red-spot'>26</i> <i
-							class='red-spot'>29</i> <i class='blue-spot'>16</i> <i
-							class="icon right history">开奖历史</i>
-					</div>
+			<li class="li5241465"><a href="kaijiang007.html">
+				<div class="clearfix liuhe">
+						<i class='red-spot' id="id1"></i>
+						<i class='red-spot' id="id2"></i>
+						<i class='red-spot' id="id3"></i>
+						<i class='red-spot' id="id4"></i>
+						<i class='red-spot' id="id5"></i>
+						<i class='red-spot' id="id6"></i>
+						<i class='red-spot' id="id7"></i>
+						<i class='blue-spot' id="id8"></i>
+						<i class="icon right history">开奖历史</i>
+				</div>
 			</a></li>
 		</ul>
 	</section>
@@ -197,4 +201,44 @@
 
 
 </body>
+<script>
+
+	$(function(){
+	var	url ="http://47.91.167.130:8032/appInterface/lottery/findLatelyLotteryResult2.do?type=qlc";
+      $.ajax({
+        data:{"type":"qlc"},//参数
+       // dataType: 'jsonp',
+	    type:"GET",
+		url,
+        success: function(data) {
+		//	alert(data.result[0].number);
+		// "number": "01,05,08,15,22,23,30,24",
+			a=data.result[0].number;
+			qihao=data.result[0].qihao;
+			typeName=data.result[0].typeName;
+			datelines=(data.result[0].dateline).substr(0,10);
+			yi=a.substr(0,2);
+			er=a.substr(3,2);
+			sa=a.substr(6,2);
+			si=a.substr(9,2);
+			wu=a.substr(12,2);
+			lu=a.substr(15,2);
+			qi=a.substr(18,2);
+			ba=a.substr(21,2);
+		 //  alert(datelines);
+		   $("#qlc").html(typeName+" "+"第"+qihao+"期");
+		   $("#timeid").html(datelines);
+           $("#id1").html(yi);
+		   $("#id2").html(er);
+		   $("#id3").html(sa);
+		   $("#id4").html(si);
+		   $("#id5").html(wu);
+		   $("#id6").html(lu);
+		   $("#id7").html(qi);
+		   $("#id8").html(ba);
+        }
+      });
+	});
+
+</script>
 </html>

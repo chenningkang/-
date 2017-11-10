@@ -33,8 +33,9 @@
 .news-ul{ background:#fff;}
 .news-ul li a{ line-height:.4rem; position:relative; border-bottom:1px solid #e8e8e8; display:block; padding:0 .1rem;}
 .news-ul a p{ font-size:.14rem;}
-.news-ul a p span{ background:red; color:#fff; padding:0 .05rem; border-radius:0.03rem; font-size:0.1rem;}
+.news-ul a p span{ padding:0 .05rem; border-radius:0.03rem; font-size:0.15rem;}
 .news-ul a time,.time{ color:#999; right:.1rem; font-size:.12rem;}
+
 
 
 
@@ -414,12 +415,14 @@ a.new{ background: url("../images/new.png") no-repeat; background-size: .2rem .2
 
 /*Ê×Ò³ÐÂÔö*/
 .lottery-hot{ background: #fff;font-size: .14rem;border-top: 1px #ececec solid; overflow:hidden; margin-top:.1rem}
-.lottery-hot li{ float:left; width:50%; padding:.1rem 0;border-bottom: 1px #ececec solid; height:.5rem; position:relative;}
+.lottery-hot li{ float:left; width:50%; padding:.1rem 0;border-bottom: 1px #ececec solid; height:.5rem; position:relative; }
+.lottery-hots li{ float:left; width:50%; padding:.1rem 0;border-bottom: 1px #ececec solid; height:.5rem; position:relative; background-color: #e7f3fc;}
 .lh-pic{ position:absolute; top:.1rem; left:.1rem; height:.5rem; width:.5rem;}
 .lh-pic img{ width:100%;}
 .lottery-hot .lottoLine:after {  content: '';height: 5.75rem;position: absolute;top: 0;right: 0; border-width: 1px 0;font-size: 0;width: 1px;background-color: #f5f5f5;}
 .lh-dl{ margin-left:.7rem;}
 .lottery-hot li .lh-name{   color: #454545;font-size: .16rem;line-height: .3rem;}
+.lottery-hots li .lh-names{   color: #454545;font-size: .16rem;line-height: .5rem; text-align:center;}
 .lh-info{color: #999;overflow: hidden;height: .2rem;line-height: .2rem;font-size: .11rem;}
 
 .lottery-wrap{ background:#fff; margin-top:.1rem; border-top: 1px solid #ececec;border-bottom: 1px solid #ececec; }
@@ -441,3 +444,6 @@ a.new{ background: url("../images/new.png") no-repeat; background-size: .2rem .2
 
 
 .history{margin-top:.05rem; color: #999; font-size: .1rem; line-height: .2rem; width: 70px;  background-position: 48px -.6rem;}
+
+.news-ul a p .spans{ background:#ffffff; color:#fff; padding:0 .05rem; border-radius:0.03rem; font-size:0.15rem; color:#2b1f1f;}
+.news-ul a p:nth-child(2n-1){background:#f5f5f5;}
