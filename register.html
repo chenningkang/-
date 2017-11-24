@@ -10,6 +10,11 @@
     <title>快速注册</title>
     <link rel="stylesheet" href="css/loginbase.css">
     <link rel="stylesheet" href="css/loginfans.css">
+	<script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/sg.js"></script>
+	<script src="js/sgutil.js"></script>
+	<!--<script src="js/jquery-1.11.2.min.js"></script> -->
     <script>
             var massage = null;
         </script>
@@ -30,7 +35,7 @@
 
 
             <div class="para reg-plan-div">
-                <div class="reg-plan-map">
+               <!--   <div class="reg-plan-map">
                     <i class="i0 active">•</i>
                     <span class="sp0 "></span>
                     <i class="i1 ">•</i>
@@ -41,11 +46,11 @@
                     <span class="spt0 active">填写手机号</span>
                     <span class="spt1">填写用户名</span>
                     <span class="spt2">成功</span>
-                </div>
+                </div>  -->
             </div>
 
             <div class="para reg-plan-div hide">
-                <div class="reg-plan-map">
+             <!--   <div class="reg-plan-map">
                     <i class="i0 active">•</i>
                     <span class="sp0 active"></span>
                     <i class="i1 active">•</i>
@@ -56,58 +61,38 @@
                     <span class="spt0 ">填写手机号</span>
                     <span class="spt1 active">填写用户名</span>
                     <span class="spt2">成功</span>
-                </div>
+                </div>    -->
             </div>
 
-            <div class="login-wrap">
-                <div class="tel-wrap">
+            <div class="login-wrap" >
+                <div class="tel-wrap" id="id1">
                     <div class="line dnbottom">
-                        <input name="rtel" class="box" type="tel" placeholder="请输入手机号码">
+                        <input name="rtel" class="box" type="tel" placeholder="请输入手机号码" id="phoneNumber" maxlength="11">
                     </div>
                     <div class="reg-sheet-line"></div>
                     <div class="line dntop">
-                        <input name="picpw" class="box" type="text"  placeholder="请填写计算结果">
+                        <input name="picpw" class="box" type="text"  placeholder="请填写计算结果" id="picpw">
                         <div class="yma"><img src="images/yzm.png" ></div>
+                    </div>
+					 <div class="divcla" >
+                        <input  id="inputid" class="box"  value="对不起，你输入的电话号码有误，请重新输入" >
+                    </div>
+				    <div class="divcla" >
+                        <input  id="inp" class="box"  value="对不起，你的计算结果有误" >
+                    </div>
+					<div class="divcla" >
+                        <input  id="zhuce" class="box"  value="对不起，你的手机号码已经注册过了，你可以选择修改密码" >
                     </div>
 
                     <input hidden id="mark" type="text" value="/fm/one">
 
                     <div id="register-btn" class="login-btn tc">获取验证码</div>
                     <div class="reg-sheet-protocol" id="js-reg-sheet-protocol">
-                        <span class="reg-sheet-iradio active"></span>
-                        <span>我已经阅读并同意《<a href="/protocol.html">万彩吧用户注册协议</a>》</span>
+                        <span class="reg-sheet-iradio active" id="spancls"></span>
+                        <span>我已经阅读并同意《<a href="protocol.html">魔曦吧用户注册协议</a>》</span>
                     </div>
                 </div>
 
-                <div class="password-wrap" style="display:none">
-                    <form id="register-form" method="post" action="/fm/two">
-                        <input type="hidden" name="_token" value="C6zfhq8WbcDpBfWQp9221blr6ybyhHKDBp3xLtTT">
-                        <input hidden type="text" id="tel" name="tel">
-                    <div class="line">
-                        <p class="o-lt">验证码</p>
-                        <p class="o-lt2"><input name="code" class="box" type="text" ></p>
-                        <p class="o-lr"><a href="javascript:void(0)" class="org-btn" id="get_check_code">重新获取验证码</a></p>
-                    </div>
-
-                    <div class="reg-sheet-tip"></div>
-
-                    <div class="line dnbottom">
-                        <p class="o-lt">用户名</p>
-                        <p class="o-lt3"><input name="name" class="box" type="txet"  placeholder="不超过8个中文，注册后不能修改"></p>
-                    </div>
-                    <div class="reg-sheet-line"></div>
-                    <div class="line dntop dnbottom">
-                        <p class="o-lt">密码</p>
-                        <p class="o-lt3"><input name="pwd1" class="box" type="password" placeholder="6-20个数字和字母_"></p>
-                    </div>
-                    <div class="reg-sheet-line"></div>
-                    <div class="line dntop ">
-                        <p class="o-lt">确认密码</p>
-                        <p class="o-lt3"><input name="pwd2" class="box" type="password" placeholder=""></p>
-                    </div>
-                    <div id="register-submit" class="login-btn tc">注册</div>
-                    </form>
-                </div>
             </div>
 
 
@@ -117,4 +102,129 @@
 </div>
 
 </body>
+<script>
+
+		//check手机号码
+		phone=document.getElementById("phoneNumber");
+		inputobj=document.getElementById("inputid");
+		picpw=document.getElementById("picpw");
+		anniu=document.getElementById("register-btn");
+		inp=document.getElementById("inp");
+		code=document.getElementById("codeId");
+		phone.onblur=function(){  //失去焦点的时候执行代码
+			var mxtelephone = phone.value;
+			//alert(mxtelephone);  //获取到电话号码
+			 var reg = /^0?1[3|4|5|7|8][0-9]\d{8}$/;
+			 if (reg.test(mxtelephone)) {
+
+			 }else{
+					inputobj.style.display='block';
+					//phone.focus();	
+			 };
+
+			phone.onfocus=function(){
+				val=this.value;
+				 inputobj.style.display='none';
+				 inp.style.display='none';
+			}
+		}
+
+		anniu.onclick=function(){
+			if(phone.value==""){
+				 inputobj.style.display='block';
+					return;
+				}
+			if(picpw.value==18){
+					
+					
+			var params = {
+				"phoneNumber":phone.value
+			};
+
+			var param = {
+				"phone":phone.value
+			};
+				//这个地方先要验证一下这个手机号是否注册过，如果注册过，那就不能再注册，没有注册过才能注册。
+				$.ajax({
+					type:"post",
+				//	url:"http://47.91.167.130:9082/pachong/user/register.do",
+					url:"http://47.91.167.130:9082/pachong/user/select.do",
+					data:param,
+					success:function(data){
+						if(data.errorcode==6){
+						//表示有这个手机号,那就不能再注册了。
+						document.getElementById("zhuce").style.display="block";
+						}
+						if(data.errorcode==4){
+						//表示没有这个手机号，让他去注册。
+						//alert(data.errorcode);
+						 //发起注册ajax请求
+							$.ajax({
+								type:"get",
+								url:"http://47.91.167.130:8032/appInterface/user/sendCode2.do",
+								data:params,
+								success:function(data){
+									if(data.errorcode==0){
+									window.location.href="register1.html?code="+data.result.code+"phone="+phone.value;
+
+									}else{
+										loading(data.message,3);
+									}
+								}
+							});
+
+
+
+
+						}
+					}
+				});
+			
+			}else{
+				inp.style.display='block';
+			}
+			picpw.onfocus=function(){
+				val=this.value;
+				 inputobj.style.display='none';
+				 inp.style.display='none';
+			}
+			phone.onfocus=function(){
+				val=this.value;
+				 inputobj.style.display='none';
+				 inp.style.display='none';
+			}
+
+		}
+		phone.onfocus=function(){
+				val=this.value;
+				 inputobj.style.display='none';
+				 inp.style.display='none';
+			}
+	
+
+	//	spans=document.getElementById('spancls');
+	//	spans.onclick=function(){
+			//this.setAttribute('class','reg-sheet-iradio');
+	//		this.className="reg-sheet-iradio";  
+	//	}
+    //循环点击换色
+	spans=document.getElementById('spancls');
+	spans.setAttribute('num',0);
+
+	spans.onclick=function(){
+		num=parseInt(this.getAttribute('num'));
+		if(num%2==0){
+			this.className="reg-sheet-iradio";  
+		}else{
+			this.className="reg-sheet-iradio active";  
+		}
+		this.setAttribute('num',num+1);
+	}
+
+
+
+		
+
+
+</script>
 </html>

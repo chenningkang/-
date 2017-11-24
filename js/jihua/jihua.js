@@ -3,7 +3,7 @@
 	//在页面循环写数据
 	 $(function(){
 		//  alert(1);
-		var	url ="http://localhost:8080/pachong/pashujuofssc/rmjh";
+		var	url ="http://47.91.167.130:9082/pachong/pashujuofssc/rmjh";
 		  $.ajax({
 		   // data:{"type":"plw"},//参数
 		   // dataType: 'jsonp',

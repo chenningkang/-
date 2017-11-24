@@ -10,6 +10,7 @@
     <title>登录</title>
     <link rel="stylesheet" href="css/loginbase.css">
     <link rel="stylesheet" href="css/loginfans.css">
+	<script src="js/jquery-1.9.1.min.js"></script>
     <script>
             var massage = "请先登录";
     </script>
@@ -35,16 +36,27 @@
                 <input type="hidden" name="_token" value="C6zfhq8WbcDpBfWQp9221blr6ybyhHKDBp3xLtTT">
                 <div class="line dnbottom">
                     <div class="lineicon i-username">
-                        <input name="tel" class="box" type="tel" placeholder="请输入手机号">
+                        <input name="tel" class="box" type="tel" placeholder="请输入手机号"  id="phone" maxlength="11">
                     </div>
                 </div>
                 <div class="reg-sheet-line"></div>
                 <div class="line dntop">
                     <div class="lineicon i-password">
-                        <input name="password" class="box" type="password"  placeholder="请输入密码">
+                        <input name="password" class="box" type="password"  placeholder="请输入密码"  id="password">
                     </div>
                 </div>
-
+				<div class="divcla" >
+                        <input  id="tishi" class="box"  value="登陆成功" >
+                 </div>
+				<div class="divcla" >
+                        <input  id="shibai" class="box"  value="登陆失败，密码错误" >
+                 </div>
+				 <div class="divcla" >
+                        <input  id="zhuce" class="box"  value="你好，你的手机号码没有注册过" >
+                 </div>
+				 <div class="divcla" >
+                        <input  id="inputid" class="box"  value="对不起，你输入的电话号码有误，请重新输入" >
+                    </div>
                 <div id='login-btn' class="login-btn tc">登录</div>
                 <div class="reg-sheet-protocol" id="js-reg-sheet-protocol">
                         <span class="fr"><a href="forget.html">忘记密码</a></span>
@@ -57,4 +69,117 @@
 </div>
 
 </body>
+<script>
+	phone=document.getElementById("phone");
+	password=document.getElementById("password");
+	login=document.getElementById("login-btn");
+	zhuce=document.getElementById("zhuce");
+	inputobj=document.getElementById("inputid");
+	
+	phone.onblur=function(){  //失去焦点的时候执行代码
+			var mxtelephone = phone.value;
+			//alert(mxtelephone);  //获取到电话号码
+			 var reg = /^0?1[3|4|5|7|8][0-9]\d{8}$/;
+			 if (reg.test(mxtelephone)) {
+
+			 }else{
+					inputobj.style.display='block';
+					//phone.focus();	
+			 };
+
+			phone.onfocus=function(){
+				val=this.value;
+				 inputobj.style.display='none';
+				 document.getElementById("shibai").style.display='none';
+				 zhuce.style.display='none';
+			}
+		}
+
+
+	login.onclick=function(){
+			if(phone.value==""){
+				 inputid.style.display='block';
+					return;
+				}
+			if(password.value==""){
+			
+					return;
+				}
+	
+			  params = {
+				"phone":phone.value,
+				"password":password.value
+			   };
+				//首先要检测手机号码是否注册过，如果说是注册过，然后才能真正的登陆，然后才看手机号，密码是否正确。
+			$.ajax({
+					type:"post",
+				//	url:"http://47.91.167.130:9082/pachong/user/register.do",
+					url:"http://47.91.167.130:9082/pachong/user/select.do",
+					data:params,
+					success:function(data){
+						if(data.errorcode==6){
+						//	表示这个手机号码注册过，然后才可以登陆。
+					    //	alert(data.errorcode);
+						 
+							//发起登陆ajax请求
+									$.ajax({
+										type:"post",
+									//	url:"http://47.91.167.130:9082/pachong/user/register.do",
+										url:"http://47.91.167.130:9082/pachong/user/login.do",
+										data:params,
+										success:function(data){
+											if(data.errorcode==0){
+											//表示成功了
+										//	alert(data.errorcode);
+											document.getElementById("tishi").style.display="block";
+											setTimeout(function(){
+												location.href='index.html?phone='+phone.value;
+											},1000); 
+										
+
+											}
+											if(data.errorcode==9){
+											//登陆失败	
+										   document.getElementById("shibai").style.display="block";
+										   //  alert(data.errorcode);
+
+											}
+										}
+									});
+						
+					
+
+						}
+						if(data.errorcode==4){
+						//没注册过，就提示就可以	
+					   document.getElementById("zhuce").style.display="block";
+					   //  alert(data.errorcode);
+
+						}
+					}
+				});
+
+
+				password.onfocus=function(){
+				 inputobj.style.display='none';
+				 document.getElementById("shibai").style.display='none';
+				 zhuce.style.display='none';
+			   }
+			   phone.onfocus=function(){
+				 inputobj.style.display='none';
+				 document.getElementById("shibai").style.display='none';
+				 zhuce.style.display='none';
+			   }
+
+
+
+	}
+	phone.onfocus=function(){
+				 inputobj.style.display='none';
+				 document.getElementById("shibai").style.display='none';
+				 zhuce.style.display='none';
+			   }
+   
+
+</script>
 </html>

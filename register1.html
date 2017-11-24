@@ -1,0 +1,301 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,width=device-width, user-scalable=no, minimal-ui">
+    <meta content="no" name="apple-mobile-web-app-capable"><!-- 全屏显示 WebApp -->
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no, email=no" name="format-detection">
+    <meta content="no" name="wap-font-scale">
+    <title>快速注册</title>
+    <link rel="stylesheet" href="css/loginbase.css">
+    <link rel="stylesheet" href="css/loginfans.css">
+	<script src="http://apps.bdimg.com/libs/jquery/2.0.0/jquery.min.js"></script>
+	<script src="js/jquery-1.9.1.min.js"></script>
+	<script src="js/sg.js"></script>
+	<script src="js/sgutil.js"></script>
+	<!--<script src="js/jquery-1.11.2.min.js"></script> -->
+    <script>
+            var massage = null;
+        </script>
+</head>
+<body >
+<!--js事件-->
+<div id="url" data-url="login2" hidden=""></div>
+
+<div class="home-wrapper">
+    <div class="pages">
+        <div class="login-page">
+
+            <div class="hd-wrap">
+                <a class="left icon loginicon return" href="JavaScript:history.go(-1)"></a>
+                <h1 class="hd-logo">快速注册</h1>
+                <a class="right login-ar" href="login.html">登录</a>
+            </div>
+
+
+            <div class="para reg-plan-div">
+
+            </div>
+
+            <div class="para reg-plan-div hide">
+
+            </div>
+
+            <div class="login-wrap" >
+
+                <div class="password-wrap" id="id2">
+                    <form id="register-form" method="post" action="/fm/two">
+                        <input type="hidden" name="_token" value="C6zfhq8WbcDpBfWQp9221blr6ybyhHKDBp3xLtTT">
+                        <input hidden type="text" id="tel" name="tel">
+                    <div class="line">
+                        <p class="o-lt">验证码</p>
+                        <p class="o-lt2"><input name="code" class="box" type="text"  id="codeId" maxlength="4" placeholder="验证码不能为空"></p>
+                        <p class="o-lr"> <!--<a href="#" class="org-btn" id="get_check_code">重新获取验证码</a> --></p>
+                    </div>
+					<div class="divcla" >
+                        <input  id="regyzm" class="box"  value="验证码不正确，请重新输入" >
+                    </div>
+					<div class="divcla" >
+                        <input  id="yan" class="box"  value="验证码不能为空" >
+                    </div>
+
+                    <div class="reg-sheet-tip"></div>
+
+                    <div class="line dnbottom">
+                        <p class="o-lt">用户名</p>
+                        <p class="o-lt3"><input name="name" class="box" type="txet"  placeholder="不超过8个中文，注册后不能修改,不能为空" id="username" maxlength="8"></p>
+                    </div>
+                    <div class="reg-sheet-line"></div>
+                    <div class="line dntop dnbottom">
+                        <p class="o-lt">密码</p>
+                        <p class="o-lt3"><input name="pwd1" class="box" type="password" placeholder="6-20个数字和字母_,不能为空" id="password" maxlength="20"></p>
+                    </div>
+                    <div class="reg-sheet-line"></div>
+                    <div class="line dntop ">
+                        <p class="o-lt">确认密码</p>
+                        <p class="o-lt3"><input name="pwd2" class="box" type="password" placeholder="" id="passwords" maxlength="20"></p>
+                    </div>
+					<div class="divcla" >
+                        <input  id="inputs" class="box"  value="用户名，密码，确认密码都不能为空" >
+                    </div>
+					<div class="divcla" >
+                        <input  id="mima" class="box"  value="两次输入密码不一致" >
+                    </div>
+					<div class="divcla" >
+                        <input  id="zc" class="box"  value="该手机号码已经注册过，请去登陆或修改密码" >
+                    </div>
+					<div class="divcla" >
+                        <input  id="tishi" class="box"  value="注册成功" >
+                    </div>
+                    <div id="register-submit" class="login-btn tc">注册</div>
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+</div>
+
+</body>
+<script>
+		//这个是提交的时候的限制
+		zhuce=document.getElementById("register-submit");
+		username=document.getElementById("username");
+		password=document.getElementById("password");
+		passwords=document.getElementById("passwords");
+		inputs=document.getElementById("inputs");
+		yan=document.getElementById("yan");
+		mima=document.getElementById("mima");
+		zc=document.getElementById("zc");
+		function  regcode(){
+			//首先获取到上一个页面的code
+			 var url = location.search; //获取url中"?"符后的字串
+			  //alert(url);  ?code=1307phone=18729788523
+			  code1=url.substr(6,4)
+			  phoneNumber=url.substr(16,11);	
+			regyzm=document.getElementById("regyzm");
+			//然后得到本页面的code
+			code=document.getElementById("codeId");
+			code.onblur=function(){
+				if(code.value==""){
+				 yan.style.display='block';
+					code.focus();
+					return;
+				}
+				if(code1==code.value){
+				}
+				else{
+				//表示验证码不正确
+				regyzm.style.display='block';
+				}
+				
+				code.onfocus=function(){
+					 regyzm.style.display='none';
+					 yan.style.display='none';
+				}
+
+			}
+
+				code.onfocus=function(){
+					 regyzm.style.display='none';
+					 yan.style.display='none';
+				}
+		
+
+
+
+
+		}
+		   regcode();
+	      //再来个自动确认密码是否相同
+			passwords.onblur=function(){
+				if(password.value!=passwords.value){
+				mima.style.display='block';
+				// passwords.select();//确认密码框得到焦点
+				 }
+
+				passwords.onfocus=function(){
+				 regyzm.style.display='none';
+				 inputs.style.display='none';
+				 yan.style.display='none';
+				 mima.style.display='none';
+				
+			    }
+
+			}
+
+		zhuce.onclick=function(){
+			//首先判断验证码
+			 if(code.value==""){
+				 yan.style.display='block';
+				 return;
+				}	
+			 if(username.value==""){
+				inputs.style.display='block';
+				return;
+				}
+				if(password.value==""){
+				inputs.style.display='block';
+				return;
+				}
+				if(passwords.value==""){
+				inputs.style.display='block';
+				return;
+				}
+
+				code.onblur=function(){
+					if(code.value==""){
+					 yan.style.display='block';
+					}
+					if(code1==code.value){
+					}
+					else{
+					//表示验证码不正确
+					regyzm.style.display='block';
+					}
+					
+					code.onfocus=function(){
+						 regyzm.style.display='none';
+						 yan.style.display='none';
+					}
+
+				}
+
+				code.onfocus=function(){
+					 regyzm.style.display='none';
+					 inputs.style.display='none';
+					 yan.style.display='none';
+				}
+				username.onfocus=function(){
+					 regyzm.style.display='none';
+					 inputs.style.display='none';
+					 yan.style.display='none';
+				}
+				password.onfocus=function(){
+					 regyzm.style.display='none';
+					 inputs.style.display='none';
+					 yan.style.display='none';
+				}
+
+				passwords.onfocus=function(){
+					 regyzm.style.display='none';
+					 inputs.style.display='none';
+					 yan.style.display='none';
+					 mima.style.display='none';
+				
+			     }
+
+
+				 //这个时候就要ajax对接后台，注册用户了。
+
+			  params = {
+				"phone":phoneNumber,
+				"username":username.value,
+				"password":password.value
+			   };
+
+			   
+
+				//发起注册ajax请求
+				$.ajax({
+					type:"post",
+				//	url:"http://47.91.167.130:9082/pachong/user/register.do",
+					url:"http://47.91.167.130:9082/pachong/user/register.do",
+					data:params,
+					success:function(data){
+						if(data.errorcode==0){
+						//表示成功了
+						//alert(data.errorcode);
+						document.getElementById("tishi").style.display="block";
+						setTimeout(function(){
+							location.href='index.html';
+						},1000); 
+					
+
+						}
+						if(data.errorcode==6){
+					//	zc.style.display='block';
+					alert(data.errorcode);
+					//	setTimeout(function(){
+					//		location='login.html';
+					//	},3000);
+						//表示该手机号码被注册过。所以调到登陆页面
+					    //	window.location.href="login.html";
+
+						}
+					}
+				});
+	      	//	window.location.href="index.html";
+
+	
+
+
+			}
+
+			    code.onfocus=function(){
+					 regyzm.style.display='none';
+					 yan.style.display='none';
+				}
+
+
+
+
+
+
+
+
+
+
+			
+
+		
+	 
+
+
+
+ 
+</script>
+</html>

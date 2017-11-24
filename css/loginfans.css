@@ -152,7 +152,7 @@
 .reg-sheet-iradio{ width:.15rem; height:.15rem; border-radius:50%; background:#d3d3d3; display:inline-block; }
 .reg-sheet-protocol a{color:#7650f6;}
 .reg-sheet-iradio{ cursor:pointer;}
-.reg-sheet-protocol .active{ background:#7650f6 url(../img/tick_64f95bb.png) center no-repeat ; background-size:80%;}
+.reg-sheet-protocol .active{ background:#7650f6 url(../images/tick_64f95bb.png) center no-repeat ; background-size:80%;}
 
 .line p{ float:left; line-height:.28rem; font-size:.13rem;}
 .o-lt{ width:20%;}
@@ -188,5 +188,11 @@
 }
 .login-barb .i-password {
     background-position: 0 -36px;
+}
+
+.divcla input{
+      display:none;
+	  margin-left:10px;
+	  color:red;
 }
 

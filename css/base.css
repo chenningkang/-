@@ -50,6 +50,7 @@ html,*{
     -webkit-box-sizing: border-box;
     box-sizing: border-box;}
 
+
 .mui-flex{
 	display: -webkit-box!important;
     display: -webkit-flex!important;
@@ -150,6 +151,10 @@ img{  display:block;}
 .header .right a{ display:inline-block !important; padding:.1rem .03rem .1rem !important;}
 .idow{ background:url(../images/dow.png) no-repeat; background-size:100%; width:.2rem; height:.2rem;}
 
+
+.titles{ display:none; font-size:.14rem; position:relative; margin-top:.1rem; color:#eb0b3b; background:#fff;border-bottom:1px solid #e8e8e8; line-height:.4rem; text-indent:.1rem; overflow:hidden;}
+.titles  a{display:block; float:left; text-indent:0;  text-align:center;}
+.titles  a.on{ border-bottom:2px solid #6e4df3; color:#6e4df3;}
 
 .title{ font-size:.14rem; position:relative; margin-top:.1rem; color:#eb0b3b; background:#fff;border-bottom:1px solid #e8e8e8; line-height:.4rem; text-indent:.1rem; overflow:hidden;}
 .title  a{display:block; float:left; text-indent:0;  text-align:center;}

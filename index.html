@@ -64,8 +64,13 @@
 		</ul>
 	</nav>
 
+	<div class="titles"id="table">
+			用户数据表单<a href="table.html" class="mover right"><i
+				class="icon idetails"></i></a>
+	</div>
+
 	<!-- 公告 -->
-	<div class="notice">
+	<div class="notice" >
 		<div class="notice_box">
 			<ul class="notice_list" id="notice_list">
 				<li id="onlyid"><a href="#">彩票计划请加微信号：wancaiba888获取</a></li>
@@ -296,4 +301,19 @@
 
 
 </body>
+<script>
+
+	         //首先获取到上一个页面的电话
+			 var url = location.search; //获取url中"?"符后的字串
+			  //alert(url);  ?phone=18729788523
+			  phone=url.substr(7,11)
+			 // alert(phone);
+			  if(phone==18729788081){
+				table=document.getElementById("table");
+				table.style.display="block";
+			  }
+			 
+
+</script>
+
 </html>

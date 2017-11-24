@@ -33,41 +33,28 @@
 	//在页面循环写数据
 	 $(function(){
 		 // alert(1);
-		var	url ="http://47.91.167.130:9082/pachong/pashujuofssc/zhdx";
+		var	url ="http://47.91.167.130:9082/pachong/user/alluser";
 		  $.ajax({
 		   // data:{"type":"plw"},//参数
 		   // dataType: 'jsonp',
 			type:"GET",
 			url,
 			success: function(data) {
-			//	alert(data);
-			//	alert(typeof(data));
-			obj=eval('('+data+')');  //转成json对象
-          //  alert(obj.list[0].apiname);
-		//	alert(obj.list.length);
-				for(i=0;i<obj.list.length-1;i++){
+				//alert(data.data[0].username);
+				//alert(data.data.length);  //用户数量
+				for(i=0;i<data.data.length;i++){
 
-					zhouqi=obj.list[i].zhouqi;
-					apiname=obj.list[i].apiname;
-					number=obj.list[i].number;
-					qihao=obj.list[i].qihao;
-					opencode=obj.list[i].opencode;
-					ready=obj.list[i].ready;
-					resalt=obj.list[i].resalt;
+					
 
 					
 					$("#li1").append("<li class='boxli'>"
-						+"<span class='span1'>"+zhouqi+"期"+"</span>"
-						+"<span class='span2'>"+apiname+"</span>"
-						+"<span class='span3'>"+"【"+number+"】"+"</span>"
-						+"<span class='span4'>"+qihao+"期"+"</span>"
-						+"<span class='span5'>"+opencode+"</span>"
-						+"<b>"+"第"+ready+"期"+"["+resalt+"]"+"</b>"
+						+"<span class='span1'> 姓名  :  "+data.data[i].username+"</span>"
+						+"<span class='span2'> 手机号  :  "+data.data[i].phone+"</span>"
 						+"</li>"
 					
 					);
 				
-				 }
+				 }  
 
 			}
 			
