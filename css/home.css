@@ -9,6 +9,7 @@
 #nav ul li a{ display:block; overflow:hidden;text-align:center; height:.7rem; background:#fff;}
 #nav ul li a img{ height:.25rem; margin:.12rem auto .03rem;}
 
+
 .kaij ul.on{ display:block !important;}
 .kaij-ul{ display:none;}
 .kaij-ul li{ background:#fff; border-bottom:1px solid #e8e8e8;}
@@ -446,4 +447,4 @@ a.new{ background: url("../images/new.png") no-repeat; background-size: .2rem .2
 .history{margin-top:.05rem; color: #999; font-size: .1rem; line-height: .2rem; width: 70px;  background-position: 48px -.6rem;}
 
 .news-ul a p .spans{ background:#ffffff; color:#fff; padding:0 .05rem; border-radius:0.03rem; font-size:0.15rem; color:#2b1f1f;}
-.news-ul a p:nth-child(2n-1){background:#f5f5f5;}
+/* .news-ul a p:nth-child(2n-1){background:#f5f5f5;} */

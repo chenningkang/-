@@ -148,7 +148,7 @@ img{  display:block;}
 #header h1{	background: none; text-indent: 0px; font-size: .16rem; text-align: center; width: 100%; line-height: .4rem;font-weight:bold;	color:#fff;}
 #header a { display:block; padding:.1rem .05rem;}
 .header .right a{ display:inline-block !important; padding:.1rem .03rem .1rem !important;}
-.idow{ background:url(../images/dow.png) no-repeat; background-size:100%; width:.2rem; height:.2rem;}
+.idow{ background:url(../images/dow.png) no-repeat; background-size:100%; width:.2rem; height:.2rem; display:block;}
 
 
 .title{ font-size:.14rem; position:relative; margin-top:.1rem; color:#eb0b3b; background:#fff;border-bottom:1px solid #e8e8e8; line-height:.4rem; text-indent:.1rem; overflow:hidden;}
